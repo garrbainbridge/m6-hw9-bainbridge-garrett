@@ -1,0 +1,72 @@
+/*Reset Rule */
+*{	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*Styling*/
+#weather {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#weather h1 {
+    font-size: 2em;
+    padding: 20px 10px;
+    border: rgb(69, 46, 218) solid 5px;
+    margin: 40px auto 20px;
+    background: rgb(130, 130, 232);
+    border-radius: 10px;
+    width: 50%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+form label {
+    font-size: 1.2em;
+    
+}
+form button {
+    background-color: rgb(130, 130, 232);
+    padding: 5px 10px;
+    margin: 30px;
+    border-radius: 5px;
+    transition-duration: .5s;
+    font-weight: bold;
+    color: white;
+}
+form button:hover {
+    background-color: rgb(69, 46, 218);
+}
+form input{
+    border: rgb(179, 179, 179) solid 3px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+aside, article {
+    background-color: rgb(130, 130, 232);
+    margin: 0 10px 20px;
+    padding: 80px 50px;
+    border: rgb(69, 46, 218) solid 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
+aside img {
+    margin: 10px;
+}
+article h3 {
+    font-size: 1.5em;
+
+}
+article h2, article h4 {
+    display: table-cell;
+    font-size: 1em;
+    padding: 10px;
+}

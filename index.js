@@ -4,7 +4,9 @@ var local = document.getElementById ('temp')
 var image = document.getElementById ('image')
 
 form.onsubmit = function (e) {
-    e.preventDefault()
+    window.location.reload();
+    return false;
+    e.preventDefault();
     console.log(locationsInput.value)
     fetch ('https://api.openweathermap.org/data/2.5/weather?appid=aed17ebb3e8c6797412a4ce7c8114cda&units=imperial&q=' + locationsInput.value)
     .then (function (response) {
@@ -21,11 +23,11 @@ form.onsubmit = function (e) {
         div.appendChild(h3)
 
         var img =document.createElement('img')
-        img.src = data.weather[0].main
+        img.src = data.weather[0].id
         image.appendChild(img)
 
-        h2.textContent = data.main.temp
-        h4.textContent = data.main.feels_like
+        h2.textContent = 'current temp' + " " + data.main.temp
+        h4.textContent ='feels like'+ " " + data.main.feels_like
         div.appendChild(h2)
         div.appendChild(h4)
 
@@ -33,6 +35,7 @@ form.onsubmit = function (e) {
         image.appendChild(p)
 
         local.appendChild(div)
+        
     })
     .catch(function(err) {
         console.log(err)
